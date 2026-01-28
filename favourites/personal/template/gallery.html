@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'gallery.css'%}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My gallery</title>
+</head>
+<body>
+    <h1>My Image Gallery</h1><br>
+    <img src="{%static 'car1.jpg' %}"><br>
+    <img src="{%static 'car2.jpg' %}"><br>
+    <img src="{%static 'car3.jpg' %}"><br>
+    <a href="/contact/">Go to contact</a>
+    
+</body>
+</html>

@@ -1,0 +1,16 @@
+body{
+    background-color: aqua;
+    align-items: center;
+}
+h1{
+    text-align: center;
+    color: brown;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-decoration: underline;
+}
+button{
+    background-color: bisque;
+    color: black;
+    padding: 8px;
+    
+}

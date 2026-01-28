@@ -1,0 +1,14 @@
+body{
+    background-color: aquamarine;
+    align-content: center;
+}
+h1{
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-decoration: underline;
+    
+}
+img{
+    border: 5px solid black;
+    
+}
