@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {%load static%}
+    <link rel="stylesheet" href="{% static 'employee.css'%}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee details</title>
+</head>
+<body>
+    <div>
+    <h1 style="text-align: center;"><u>Employee Details</u></h1><br><br>
+    {%for employee in emp_details%}
+    <h3>Name: {{employee.name}}</h3>
+    <p>Job title: {{employee.jobtitle}}</p>
+    <p>Salary: {{employee.salary}}</p>
+         {%if employee.time%}
+            <span style="color: green;">Full time</span><hr>
+         {%else%}
+            <span style="color: red;">Part time</span>   <hr>
+         {%endif%}
+    {% endfor %}
+    </div>
+
+    
+</body>
+</html>

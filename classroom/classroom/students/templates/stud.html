@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {%load static%}
+    <link rel="stylesheet" href="{%static 'stud.css'%}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classroom</title>
+</head>
+<body>
+    <h1 style="text-align: center;"><u>Classrooms</u></h1><br><br>
+    
+    {%for x in details%}
+    <h3>Name :{{x.name}}</h3>
+    <p>Grade :{{x.grade}}</p>
+
+        {% if x.result %}
+           <p>Result :</p> <span class="pass" style="color: green;">Passed</span><hr>
+        {%else%}
+           <p>Result :</p> <span class="fail" style="color: red;">Failed</span> <hr>
+        {% endif %}
+    {% endfor %}         
+    
+
+
+    
+</body>
+</html>

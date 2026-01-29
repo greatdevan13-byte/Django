@@ -1,0 +1,33 @@
+body{
+    background-color: bisque;
+    text-align: center;
+    
+}
+h1{
+    color: chocolate;
+    text-shadow: 10px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-top: 30px;
+}
+.pass:hover{
+    color: rgb(216, 228, 228);
+    background-color: green;
+
+}
+.fail:hover{
+    color: rgb(252, 246, 246);
+    background-color: red;
+}
+hr{
+    height: 2px;
+    background-color: #ddd;
+    margin-top: 20px;
+}
+.pass{
+    background-color: #e6fff1;
+}
+.fail{
+    background-color: azure;
+}
