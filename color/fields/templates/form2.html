@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display</title>
+    <style>
+        body{
+            background-color: rgb(195, 247, 252);
+        }
+        table {
+    margin: 30px auto;
+    border-collapse: collapse;
+    width: 60%;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: antiquewhite;
+}
+
+tr {
+    transition: background-color 0.3s ease;
+}
+
+
+
+tr:hover {
+    background-color: #e6f2ff;
+}
+
+td {
+    padding: 14px 18px;
+    font-size: 18px;
+}
+
+
+
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;"><u>Here is your page</u></h1><br><br>
+    <h3 style="text-align: center;">Hello...{{Name}} , your favourite color is {{Color}}!</h3><br><br>
+    <table>
+        {% for x,y in formData.items %}
+        <tr>
+            <td>{{x}}</td>
+            <td>:</td>
+            <td>{{y}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    
+</body>
+</html>
