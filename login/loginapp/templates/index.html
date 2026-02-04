@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    <h1>Login</h1>
+    <form action="" method="POST">
+         {% csrf_token %}
+      <p>
+            {{ form.email.label }} <br>
+            {{ form.email }}
+            <span style="color:red;">{{ form.email.errors }}</span>
+        </p>
+
+        <p>
+            {{ form.password.label }} <br>
+            {{ form.password }}
+            <span style="color:red;">{{ form.password.errors }}</span>
+        </p>
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

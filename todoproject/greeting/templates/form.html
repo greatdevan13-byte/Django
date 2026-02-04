@@ -5,14 +5,10 @@
 </head>
 <body>
     <h2>{{ email }}</h2>
-    <table>
-    {% for x,y in formData.items %}
-     <tr>
-         <td>{{ x }}</td>
-         <td>:</td>
-         <td>{{ y }}</td>
-     </tr>
+    {% for x,y in form_data.items %}
+    <p>{{x}} : {{y}}</p>
+    
     {% endfor %}
-    </table>
+    
 </body>
 </html>

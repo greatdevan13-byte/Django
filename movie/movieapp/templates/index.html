@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Movie</title>
+    <style>
+        div{
+            text-align: center;
+        }
+        body{
+            background-color: antiquewhite;
+        }
+    </style>
+</head>
+<body>
+
+    <h2 style="text-align: center;"><u>Add a movie</u></h2><br><br>
+    <div>
+
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_table }}
+        <button type="submit">Save Movie</button>
+    </form>
+    </div>
+
+
+</body>
+</html>
