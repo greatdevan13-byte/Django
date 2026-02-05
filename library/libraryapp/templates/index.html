@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Libraary Form</title>
+    <style>
+        body{
+            background-color: rgb(232, 245, 157);
+            text-align: center;
+           
+        }
+        form{
+            padding: 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: antiquewhite;
+        }
+
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;"><u>Fill in the form</u></h1><br><br><br>
+    <form action="" method="post">
+        {% csrf_token %}
+        {{form.as_table}}
+        <button type="submit">Save Book</button>
+    </form>
+    
+</body>
+</html>

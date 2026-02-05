@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>All Books</title>
+    <style>
+        body{
+            background-color: rgb(148, 243, 132);
+            text-align: center;
+        }
+        table{
+            display: flex;
+            justify-content: center;
+            padding: 10px;
+            width: auto;
+            margin: auto;
+        }
+        tr{
+            padding: 10px;
+            margin: auto;
+        }
+        td{
+            padding: 30px;
+            margin: auto;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+    </style>
+</head>
+<body>
+    <h2>Saved Books</h2><br><br>
+
+    <table border="1">
+        <tr>
+            <th>Title</th>
+            <th>Author</th>
+        </tr>
+
+        {% for book in data %}
+        <tr>
+            <td>{{ book.book_title }}</td>
+            <td>{{ book.authors_name }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <br>
+   
+</body>
+</html>

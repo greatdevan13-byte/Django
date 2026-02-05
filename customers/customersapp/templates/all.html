@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All details</title>
+    <style>
+        body{
+            background-color: rgb(252, 166, 251);
+
+        }
+        table{
+            text-align: center;
+            padding: 20px;
+            margin: auto;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        td{
+            padding: 30px;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;"><u>All customers</u></h1><br><br>
+    
+
+<table border="1">
+    <tr>
+        <th>Name</th>
+        <th>Email</th>
+    </tr>
+
+    {% for customer in data %}
+    <tr>
+        <td>{{ customer.name }}</td>
+        <td>{{ customer.email }}</td>
+    </tr>
+    {% endfor %}
+</table><br><br>
+<a href="/filtered/">View Filtered</a>
+
+    
+</body>
+</html>
