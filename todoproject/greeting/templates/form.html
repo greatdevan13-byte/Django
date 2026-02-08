@@ -4,11 +4,14 @@
     <title></title>
 </head>
 <body>
-    <h2>{{ email }}</h2>
-    {% for x,y in form_data.items %}
-    <p>{{x}} : {{y}}</p>
+    <nav>
+     <a href="{% url 'about-us' %}">About Us</a>
+     </nav>
+    <h2>{{ message }}</h2>
+
+    <p>{{customer.email}}</p>
     
-    {% endfor %}
+    
     
 </body>
 </html>

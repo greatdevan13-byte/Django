@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout</title>
+    <style>
+        h1{
+            font-size: xx-large;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        body{
+            background-color: antiquewhite;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        a{
+            display: flex;
+            justify-content: center;
+        }
+        a:hover{
+            background-color: rgb(244, 194, 159);
+            padding: 10px;
+            text-decoration: overline;
+            transition: 1s;
+            color: red;
+            
+            
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;"><u>Common heading</u></h1><hr>
+    
+
+    {% block content %}
+    {% endblock %}
+
+    
+</body>
+</html>

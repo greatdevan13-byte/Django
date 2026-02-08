@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+<style>
+    h2{
+        background-color: aqua;
+        padding: 20px;
+    }
+</style>
+<h2 style="text-align: center;">About page</h2><br>
+<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime unde quasi voluptas, dolorum at tempora, veniam amet debitis hic minima ratione? Excepturi fugiat qui accusantium cum, odio enim. Dolor, iure.</p><br><br>
+
+<a href="{% url 'home' %}">Go to home page</a>
+{% endblock %}
