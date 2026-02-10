@@ -1,0 +1,67 @@
+{% extends 'layout.html' %}
+{% block content %}
+<style>
+    body{
+        background-color: rgb(132, 236, 205);
+        text-align: center;
+    }
+    #del{
+        color: black;
+        background-color: red;
+        padding: 3px;
+        text-decoration: none;
+    }
+    #del:hover{
+        
+        background-color: aliceblue;
+        text-decoration: overline;
+    }
+    #upd{
+        color: black;
+        background-color: green;
+        padding: 3px;
+        text-decoration: none;
+    }
+    #upd:hover{
+        background-color: aqua;
+        text-decoration: overline;
+    }
+    #add{
+        color: azure;
+        text-decoration: none;
+        font-size: medium;
+        background-color: rgb(76, 79, 80);
+        padding: 10px;
+    }
+    #add:hover{
+        text-decoration: underline;
+        background-color: brown;
+    }
+
+</style>
+<h2>Library Books</h2><br>
+
+<a href="{% url 'add' %}" id="add"> Add New Book</a><br><br>
+
+{% for book in page_obj %}
+    <p>
+        {{ book.title }} | {{ book.author }} | {{ book.year }}
+        <a href="{% url 'update' book.id %} " id="upd">Edit</a>
+        <a href="{% url 'delete' book.id %}" id="del">Delete</a>
+    </p>
+{% endfor %}
+<br><br>
+<div>
+    {% if page_obj.has_previous %}
+        <a href="?page=1">First</a>
+        <a href="?page={{ page_obj.previous_page_number }}">Previous</a>
+    {% endif %}
+
+    Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}
+
+    {% if page_obj.has_next %}
+        <a href="?page={{ page_obj.next_page_number }}">Next</a>
+        <a href="?page={{ page_obj.paginator.num_pages }}">Last</a>
+    {% endif %}
+</div>
+ {% endblock %}

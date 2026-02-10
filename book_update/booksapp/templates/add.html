@@ -1,0 +1,32 @@
+{% extends 'layout.html' %}
+{% block content %}
+<style>
+    form{
+        display: flex;
+        justify-content: center;
+        padding: 100px;
+        background-color: beige;
+    }
+    a{
+        display: flex;
+        justify-content: center;
+        font-size: medium;
+    }
+    a:hover{
+        color: red;
+        text-decoration: overline;
+    }
+    body{
+        background-color: rgb(186, 220, 250);
+    }
+</style>
+<h2 style="text-align: center;"><u>Book form</u></h2><br><br>
+
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_table }}
+    <button type="submit">Save</button>
+</form><br><br>
+<a href="{% url 'home' %}">Go to home</a>
+
+ {% endblock %}
