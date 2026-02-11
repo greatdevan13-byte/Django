@@ -5,7 +5,7 @@ from django.core.paginator import Paginator
 # Create your views here.
 def home(request):
     books = Books.objects.all()
-    paginator = Paginator(books, 5)  # 5 books per page
+    paginator = Paginator(books, 3)  # 5 books per page
 
     page_number = request.GET.get('page')
     page_obj = paginator.get_page(page_number)

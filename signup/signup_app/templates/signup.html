@@ -1,0 +1,30 @@
+ {% extends 'layout.html' %}
+ {% block content %}
+ <style>
+    form{
+      margin: auto;
+    }
+    #cards{
+      background-color: rgb(255, 221, 175);
+      padding: 50px;
+      width: 50%;
+      margin: auto;
+      border-color: beige;
+    }
+    h2{
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      text-decoration: double;
+      color: rgb(70, 135, 255);
+      background-color: aliceblue;
+      padding: 20px;
+    }
+ </style>
+ <div id="cards">
+ <h2 style="text-align: center;"><u>Sign up</u></h2><br><br>
+ <form action="" method="post">
+    {% csrf_token %}
+    {{form.as_table}}
+    <button type="submit">Sign up</button>
+ </form>
+ </div>
+ {% endblock %}
