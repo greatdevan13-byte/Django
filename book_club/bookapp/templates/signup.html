@@ -1,0 +1,59 @@
+{% extends 'layout.html' %}
+{% block content %}
+<style>
+    body{
+        background-color: antiquewhite;
+    }
+    .signup-container {
+    width: 400px;
+    margin: 60px auto;
+    padding: 30px;
+    background-color: #f4f6f8;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.signup-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.signup-container table {
+    width: 100%;
+}
+
+.signup-container input {
+    width: 100%;
+    padding: 8px;
+    margin: 6px 0 12px 0;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.signup-container button {
+    width: 100%;
+    padding: 10px;
+    background-color: #2c7be5;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.signup-container button:hover {
+    background-color: #1a5fd1;
+}
+
+</style>
+<div class="signup-container">
+<h2 style="text-align: center;"><u>Sign up</u></h2><br><br><br>
+
+<form action="" method="post">
+    {% csrf_token %}
+    {{form.as_table}}
+    <button type="submit">Sign up</button>
+</form>
+</div>
+ {% endblock %}
