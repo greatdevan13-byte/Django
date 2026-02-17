@@ -8,6 +8,7 @@ urlpatterns = [
     path('page/<str:title>/', views.pages,name='page'),
     path('count/<int:num>/', views.count,name='count'),
     path('login/', RedirectView.as_view(pattern_name='about-us')),
-    path('signup/',include('login.urls'))
+    path('signup/',include('login.urls')),
+    path('productsapi/', include('productsapi.urls')),
 ]  # Redirect to 'home' URL
 
